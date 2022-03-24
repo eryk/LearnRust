@@ -6,9 +6,9 @@ LeetCode
 (Notes: "&hearts;" means you need to buy a book from Leetcode)
 
 
-| # | Title | Solution                         | Difficulty | Tag | Note |
-|---| ----- |----------------------------------| ---------- | --- | --- |
-|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./src/two_sum.rs) |Easy|Array| vector,unordered_map |
+| # | Title | Solution                         | Difficulty | Tag | Note      |
+|---| ----- |----------------------------------| ---------- | --- |-----------|
+|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./src/two_sum.rs) |Easy|Array| Vec,HashMap |
 
 # 数据结构
 
