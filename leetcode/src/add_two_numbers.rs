@@ -2,8 +2,6 @@
 // Author : eryk xu
 // Date   : 2022-03-24
 
-use std::borrow::{Borrow, BorrowMut};
-
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
@@ -24,7 +22,7 @@ impl ListNode {
                 let mut head = Some(Box::new(ListNode::new(*nodes.first().unwrap())));
                 let mut tail = &mut head;
                 for i in 1..nodes.len() {
-                    let mut node = Some(Box::new(ListNode::new(*nodes.get(i).unwrap())));
+                    let node = Some(Box::new(ListNode::new(*nodes.get(i).unwrap())));
                     tail.as_deref_mut().unwrap().next = node;
                     tail = &mut tail.as_deref_mut().unwrap().next;
                 }
@@ -36,9 +34,10 @@ impl ListNode {
 
 struct Solution;
 
-type BoxNode = Option<Box<ListNode>>;
+// type BoxNode = Option<Box<ListNode>>;
 
 impl Solution {
+    #[allow(unused_assignments)]
     pub fn add_two_numbers(
         l1: Option<Box<ListNode>>,
         l2: Option<Box<ListNode>>,
@@ -47,13 +46,13 @@ impl Solution {
         let mut p2 = l2.as_ref();
         let mut head = Some(Box::new(ListNode::new(0)));
         let mut tail = &mut head;
-        let mut v1 = 0;
-        let mut v2 = 0;
-        let mut val = 0;
+
         let mut carry = 0;
         while p1.is_some() | p2.is_some() {
-            v1 = 0;
-            v2 = 0;
+            let mut v1 = 0;
+            let mut v2 = 0;
+            let mut val = 0;
+
             if p1.is_some() {
                 v1 = p1.unwrap().val;
                 p1 = p1.unwrap().next.as_ref();
@@ -74,6 +73,7 @@ impl Solution {
         head.unwrap().next
     }
 
+    #[allow(dead_code)]
     pub fn add_two_numbers1(
         l1: Option<Box<ListNode>>,
         l2: Option<Box<ListNode>>,
@@ -103,6 +103,7 @@ impl Solution {
         Some(Box::new(ln))
     }
 
+    #[allow(dead_code)]
     pub fn add_two_numbers2(
         l1: Option<Box<ListNode>>,
         l2: Option<Box<ListNode>>,
@@ -135,7 +136,6 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::add_two_numbers::{ListNode, Solution};
-    use std::ops::Deref;
 
     #[test]
     fn test() {
