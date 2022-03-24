@@ -6,9 +6,10 @@ LeetCode
 (Notes: "&hearts;" means you need to buy a book from Leetcode)
 
 
-| # | Title | Solution                         | Difficulty | Tag | Note      |
-|---| ----- |----------------------------------| ---------- | --- |-----------|
-|1|[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./src/two_sum.rs) |Easy|Array| Vec,HashMap |
+| #   | Title | Solution                         | Difficulty | Tag   | Note        |
+|-----| ----- |----------------------------------|------------|-------|-------------|
+| 2   |[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [Rust](./src/add_two_numbers.rs) | Medium | LinkedList| Recursion |
+| 1   |[Two Sum](https://leetcode.com/problems/two-sum/) | [Rust](./src/two_sum.rs)         | Easy       | Array | Vec,HashMap |
 
 # 数据结构
 
